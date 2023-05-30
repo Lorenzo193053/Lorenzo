@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    
+
+  
+    <div class="formulario">
+        <h2>Inicio de Sesión </h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="Usuario">Usuario</label>
+                <input type="text" name="username" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" name="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+        </form>
+        <div class="registrarse">¿No tienes una cuenta? <a href="#">Registrarse</a></div>
+    </div>
+</body>
+</html>
